@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1135ADD51CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 1135ADD41CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.m */; };
 		117213671CECB47300CC6F58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117213661CECB47300CC6F58 /* main.m */; };
 		1172136A1CECB47300CC6F58 /* HLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117213691CECB47300CC6F58 /* HLAppDelegate.m */; };
 		117213721CECB47300CC6F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117213711CECB47300CC6F58 /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		1189F6761CF8C4FC00FE2FB2 /* HLSplitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1189F6751CF8C4FC00FE2FB2 /* HLSplitVC.m */; };
 		118E082C1CFDF8D4004DECA6 /* UIViewController+HLBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E082B1CFDF8D4004DECA6 /* UIViewController+HLBackButton.m */; };
 		119995801CF6F086003A5EEE /* HLHotelDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1199957F1CF6F086003A5EEE /* HLHotelDescriptionCell.m */; };
-		11ABAC0D1CFA455B0082250A /* HLLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABAC0C1CFA455B0082250A /* HLLayoutHelper.m */; };
 		11D635191CF259D8005E59B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11D635171CF259D8005E59B2 /* Localizable.strings */; };
 		11D635231CF25E5D005E59B2 /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D635221CF25E5D005E59B2 /* HCSStarRatingView.m */; };
 		11EC14F31CF5A5C40012ED51 /* UIColor+HLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC14F11CF5A5C40012ED51 /* UIColor+HLColors.m */; };
@@ -29,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1135ADD31CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+HLConstraints.h"; sourceTree = "<group>"; };
+		1135ADD41CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+HLConstraints.m"; sourceTree = "<group>"; };
 		117213621CECB47300CC6F58 /* HotelsLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelsLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117213661CECB47300CC6F58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117213681CECB47300CC6F58 /* HLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		118E082B1CFDF8D4004DECA6 /* UIViewController+HLBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HLBackButton.m"; sourceTree = "<group>"; };
 		1199957E1CF6F086003A5EEE /* HLHotelDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHotelDescriptionCell.h; sourceTree = "<group>"; };
 		1199957F1CF6F086003A5EEE /* HLHotelDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHotelDescriptionCell.m; sourceTree = "<group>"; };
-		11ABAC0B1CFA455B0082250A /* HLLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayoutHelper.h; sourceTree = "<group>"; };
-		11ABAC0C1CFA455B0082250A /* HLLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLayoutHelper.m; sourceTree = "<group>"; };
 		11D635181CF259D8005E59B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		11D6351B1CF25A11005E59B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		11D635211CF25E5D005E59B2 /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
@@ -105,7 +105,6 @@
 				11D635201CF25E5D005E59B2 /* 3rdparty */,
 				11EC14ED1CF5A5C40012ED51 /* Categories */,
 				11EC14F41CF5A5CD0012ED51 /* Controllers */,
-				11ABAC0A1CFA45350082250A /* Helpers */,
 				11EC14F81CF5A5D60012ED51 /* Model */,
 				117213651CECB47300CC6F58 /* Supporting Files */,
 				11EC14FC1CF5A5DE0012ED51 /* ViewControllers */,
@@ -121,15 +120,6 @@
 				117213661CECB47300CC6F58 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		11ABAC0A1CFA45350082250A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				11ABAC0B1CFA455B0082250A /* HLLayoutHelper.h */,
-				11ABAC0C1CFA455B0082250A /* HLLayoutHelper.m */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		11D635201CF25E5D005E59B2 /* 3rdparty */ = {
@@ -148,6 +138,8 @@
 				11EC14F11CF5A5C40012ED51 /* UIColor+HLColors.m */,
 				118E082A1CFDF8D4004DECA6 /* UIViewController+HLBackButton.h */,
 				118E082B1CFDF8D4004DECA6 /* UIViewController+HLBackButton.m */,
+				1135ADD31CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.h */,
+				1135ADD41CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -281,9 +273,9 @@
 				11EC14F31CF5A5C40012ED51 /* UIColor+HLColors.m in Sources */,
 				11EC14F71CF5A5CD0012ED51 /* HLHotelLoader.m in Sources */,
 				1172136A1CECB47300CC6F58 /* HLAppDelegate.m in Sources */,
+				1135ADD51CFF9FAF005DC503 /* NSLayoutConstraint+HLConstraints.m in Sources */,
 				11EC150D1CF5A5E50012ED51 /* HLHotelDetailCell.m in Sources */,
 				11EC14FB1CF5A5D60012ED51 /* HLHotel.m in Sources */,
-				11ABAC0D1CFA455B0082250A /* HLLayoutHelper.m in Sources */,
 				11EC15021CF5A5DE0012ED51 /* HLHotelsListVC.m in Sources */,
 				11EC150C1CF5A5E50012ED51 /* HLHotelCell.m in Sources */,
 				117213671CECB47300CC6F58 /* main.m in Sources */,

@@ -28,9 +28,11 @@
 #import "HLHotelGalleryHeader.h"
 
 #import "HLHotelLoader.h"
-#import "UIColor+HLColors.h"
-#import "HLLayoutHelper.h"
+
 #import "HLHotelGalleryCell.h"
+
+#import "UIColor+HLColors.h"
+#import "NSLayoutConstraint+HLConstraints.h"
 
 static NSString * const galleryCellId = @"cellCollectionId";
 
@@ -219,10 +221,10 @@ UICollectionViewDelegateFlowLayout> {
                                  @"H:|-0-[collectionView]-0-|",
                                  @"H:[photoIconView]-10-[countPhotoLabel(60)]-0-|"];
         
-        _layoutConstraints = [HLLayoutHelper constraintsWithFormatArray:formatArray
-                                                                options:0
-                                                                metrics:nil
-                                                                  views:views];
+        _layoutConstraints = [NSLayoutConstraint constraintsWithFormatArray:formatArray
+                                                                    options:0
+                                                                    metrics:nil
+                                                                      views:views];
     }
     
     return _layoutConstraints;

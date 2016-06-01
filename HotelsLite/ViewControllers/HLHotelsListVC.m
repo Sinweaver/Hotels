@@ -27,9 +27,6 @@
 
 #import "HLHotelsListVC.h"
 
-#import "UIColor+HLColors.h"
-
-#import "HLLayoutHelper.h"
 #import "HLHotelLoader.h"
 
 #import "HLHotel.h"
@@ -37,6 +34,9 @@
 #import "HLHotelCell.h"
 #import "HLHotelDetailVC.h"
 #import "HCSStarRatingView.h"
+
+#import "UIColor+HLColors.h"
+#import "NSLayoutConstraint+HLConstraints.h"
 
 static NSString * const hotelCellId = @"HLHotelCell";
 
@@ -371,20 +371,20 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSArray *formatArray = @[@"V:[topGuide]-0-[tableView]-0-|",
                                  @"H:|-0-[tableView]-0-|"];
         
-        NSArray *constraints = [HLLayoutHelper constraintsWithFormatArray:formatArray
-                                                                  options:0
-                                                                  metrics:nil
-                                                                    views:views];
+        NSArray *constraints = [NSLayoutConstraint constraintsWithFormatArray:formatArray
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views];
         
-        NSLayoutConstraint *centerX = [HLLayoutHelper constraintsCenterX:self.activityIndicator
-                                                                  toItem:self.tableView
-                                                              multiplier:1.0
-                                                                constant:0.0];
+        NSLayoutConstraint *centerX = [NSLayoutConstraint constraintsCenterX:self.activityIndicator
+                                                                      toItem:self.tableView
+                                                                  multiplier:1.0
+                                                                    constant:0.0];
         
-        NSLayoutConstraint *centerY = [HLLayoutHelper constraintsCenterY:self.activityIndicator
-                                                                  toItem:self.tableView
-                                                              multiplier:1.0
-                                                                constant:0.0];
+        NSLayoutConstraint *centerY = [NSLayoutConstraint constraintsCenterY:self.activityIndicator
+                                                                      toItem:self.tableView
+                                                                  multiplier:1.0
+                                                                    constant:0.0];
         
         NSMutableArray *result = [NSMutableArray array];
         [result addObjectsFromArray:constraints];

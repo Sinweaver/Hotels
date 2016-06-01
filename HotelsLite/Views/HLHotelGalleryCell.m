@@ -27,7 +27,7 @@
 
 #import "HLHotelGalleryCell.h"
 
-#import "HLLayoutHelper.h"
+#import "NSLayoutConstraint+HLConstraints.h"
 
 @interface HLHotelGalleryCell ()
 
@@ -76,10 +76,10 @@
         NSArray *formatArray = @[@"V:|-0-[hotelImageView]-0-|",
                                  @"H:|-0-[hotelImageView]-0-|"];
         
-        _layoutConstraints = [HLLayoutHelper constraintsWithFormatArray:formatArray
-                                                                options:0
-                                                                metrics:nil
-                                                                  views:views];
+        _layoutConstraints = [NSLayoutConstraint constraintsWithFormatArray:formatArray
+                                                                    options:0
+                                                                    metrics:nil
+                                                                      views:views];
     }
     
     return _layoutConstraints;

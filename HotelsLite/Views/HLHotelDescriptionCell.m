@@ -27,8 +27,9 @@
 
 #import "HLHotelDescriptionCell.h"
 
-#import "HLLayoutHelper.h"
 #import "HCSStarRatingView.h"
+
+#import "NSLayoutConstraint+HLConstraints.h"
 
 @interface HLHotelDescriptionCell ()
 
@@ -93,10 +94,10 @@
         NSArray *formatArray = @[@"V:|-10-[hotelDescriptionLabel]-10-|",
                                  @"H:|-10-[hotelDescriptionLabel]-10-|"];
         
-        _layoutConstraints = [HLLayoutHelper constraintsWithFormatArray:formatArray
-                                                                options:0
-                                                                metrics:nil
-                                                                  views:views];
+        _layoutConstraints = [NSLayoutConstraint constraintsWithFormatArray:formatArray
+                                                                    options:0
+                                                                    metrics:nil
+                                                                      views:views];
     }
     
     return _layoutConstraints;

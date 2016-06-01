@@ -27,10 +27,6 @@
 
 #import "HLHotelDetailVC.h"
 
-#import "UIColor+HLColors.h"
-#import "UIViewController+HLBackButton.h"
-
-#import "HLLayoutHelper.h"
 #import "HLHotelLoader.h"
 
 #import "HLHotel.h"
@@ -41,6 +37,9 @@
 #import "HLHotelDetailCell.h"
 #import "HLHotelDescriptionCell.h"
 
+#import "UIColor+HLColors.h"
+#import "UIViewController+HLBackButton.h"
+#import "NSLayoutConstraint+HLConstraints.h"
 
 static NSString * const detailCellId        = @"HLHotelDetailCell";
 static NSString * const defaultCellId       = @"UITableViewCell";
@@ -278,20 +277,20 @@ static CGFloat const kTableHeaderHeight = 280.0;
                                  @"H:|-0-[headerView(==tableView)]",
                                  @"H:[emptyImageView(80)]"];
         
-        NSArray *constraints = [HLLayoutHelper constraintsWithFormatArray:formatArray
-                                                                  options:0
-                                                                  metrics:nil
-                                                                    views:views];
+        NSArray *constraints = [NSLayoutConstraint constraintsWithFormatArray:formatArray
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views];
         
-        NSLayoutConstraint *centerX = [HLLayoutHelper constraintsCenterX:self.emptyImageView
-                                                                  toItem:self.tableView
-                                                              multiplier:1.0
-                                                                constant:0.0];
+        NSLayoutConstraint *centerX = [NSLayoutConstraint constraintsCenterX:self.emptyImageView
+                                                                      toItem:self.tableView
+                                                                  multiplier:1.0
+                                                                    constant:0.0];
         
-        NSLayoutConstraint *centerY = [HLLayoutHelper constraintsCenterY:self.emptyImageView
-                                                                  toItem:self.tableView
-                                                              multiplier:1.0
-                                                                constant:-kTableHeaderHeight];
+        NSLayoutConstraint *centerY = [NSLayoutConstraint constraintsCenterY:self.emptyImageView
+                                                                      toItem:self.tableView
+                                                                  multiplier:1.0
+                                                                    constant:-kTableHeaderHeight];
         
         NSMutableArray *result = [NSMutableArray array];
         [result addObjectsFromArray:constraints];

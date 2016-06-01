@@ -1,5 +1,5 @@
 //
-//  HLLayoutHelper.h
+//  NSLayoutConstraint+HLConstraints.h
 //  HotelsLite
 //
 //  The MIT License (MIT)
@@ -26,9 +26,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
-@interface HLLayoutHelper : NSObject
+@interface NSLayoutConstraint (HLConstraints)
 
 + (nonnull NSArray *)constraintsWithFormatArray:(nonnull NSArray *)formatArray
                                         options:(NSLayoutFormatOptions)opts
@@ -44,6 +43,5 @@
                                             toItem:(nullable id)view2
                                         multiplier:(CGFloat)multiplier
                                           constant:(CGFloat)constant;
-
 
 @end

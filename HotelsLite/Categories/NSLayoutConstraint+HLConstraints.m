@@ -1,5 +1,5 @@
 //
-//  HLLayoutHelper.m
+//  NSLayoutConstraint+HLConstraints.m
 //  HotelsLite
 //
 //  The MIT License (MIT)
@@ -25,9 +25,9 @@
 //  SOFTWARE.
 //
 
-#import "HLLayoutHelper.h"
+#import "NSLayoutConstraint+HLConstraints.h"
 
-@implementation HLLayoutHelper
+@implementation NSLayoutConstraint (HLConstraints)
 
 + (nonnull NSArray *)constraintsWithFormatArray:(nonnull NSArray *)formatArray
                                         options:(NSLayoutFormatOptions)opts
@@ -36,10 +36,10 @@
     
     NSMutableArray *result = [NSMutableArray array];
     for (NSString *format in formatArray) {
-        NSArray *c = [NSLayoutConstraint constraintsWithVisualFormat:format
-                                                             options:opts
-                                                             metrics:metrics
-                                                               views:views];
+        NSArray *c = [self constraintsWithVisualFormat:format
+                                               options:opts
+                                               metrics:metrics
+                                                 views:views];
         [result addObjectsFromArray:c];
     }
     
@@ -51,13 +51,13 @@
                                         multiplier:(CGFloat)multiplier
                                           constant:(CGFloat)constant {
     
-    return [NSLayoutConstraint constraintWithItem:view
-                                        attribute:NSLayoutAttributeCenterX
-                                        relatedBy:NSLayoutRelationEqual
-                                           toItem:view2
-                                        attribute:NSLayoutAttributeCenterX
-                                       multiplier:multiplier
-                                         constant:constant];
+    return [self constraintWithItem:view
+                          attribute:NSLayoutAttributeCenterX
+                          relatedBy:NSLayoutRelationEqual
+                             toItem:view2
+                          attribute:NSLayoutAttributeCenterX
+                         multiplier:multiplier
+                           constant:constant];
 }
 
 + (nonnull NSLayoutConstraint *)constraintsCenterY:(nonnull id)view
@@ -65,13 +65,13 @@
                                         multiplier:(CGFloat)multiplier
                                           constant:(CGFloat)constant {
     
-    return [NSLayoutConstraint constraintWithItem:view
-                                        attribute:NSLayoutAttributeCenterY
-                                        relatedBy:NSLayoutRelationEqual
-                                           toItem:view2
-                                        attribute:NSLayoutAttributeCenterY
-                                       multiplier:multiplier
-                                         constant:constant];
+    return [self constraintWithItem:view
+                          attribute:NSLayoutAttributeCenterY
+                          relatedBy:NSLayoutRelationEqual
+                             toItem:view2
+                          attribute:NSLayoutAttributeCenterY
+                         multiplier:multiplier
+                           constant:constant];
 }
 
 @end
