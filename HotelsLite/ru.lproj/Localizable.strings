@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  HotelsLite
+
+  Created by Alexander Borovikov on 23.05.16.
+  Copyright © 2016 Alexander Borovikov. All rights reserved.
+*/
+
+/*
+ * HLHotelsListVC
+ */
+"Hotels.Title" = "Отели";
+"Hotels.SortByName" = "Cортировать по имени";
+"Hotels.SortByRating" = "Cортировать по рейтингу";
