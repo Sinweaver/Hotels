@@ -1,13 +1,17 @@
 # Hotels
 
-This is a demo project to demonstrate the remote loading JSON and images without using IB.
+This is a demo project to demonstrate the remote loading JSON and images without using IB for iPhone and iPad.
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/Sinweaver/Hotels/master/screenshots/iPhone-Vertical.png" width="218"/>
-<img src="https://raw.githubusercontent.com/Sinweaver/Hotels/master/screenshots/iPhone-Detail.png" width="218"/>
-
-<img src="https://raw.githubusercontent.com/Sinweaver/Hotels/master/screenshots/iPad-Horizontal.png" width="436"/>
+<div style="text-align:center">
+<img src="https://raw.githubusercontent.com/Sinweaver/Hotels/master/screenshots/iPhone-Vertical.png" height="400"/>
+<img src="https://raw.githubusercontent.com/Sinweaver/Hotels/master/screenshots/iPhone-Detail.png" height="400"/>
+</div>
+<br><br>
+<div style="text-align:center">
+<img src="https://raw.githubusercontent.com/Sinweaver/Hotels/master/screenshots/iPad-Horizontal.png" height="400"/>
+</div>
 
 ## License
 
